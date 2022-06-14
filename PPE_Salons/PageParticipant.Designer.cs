@@ -167,7 +167,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PageParticipant";
-            this.Text = "Ajout - Participant.e";
+            this.Text = "Gestion - Participant";
             this.Load += new System.EventHandler(this.PageParticipant_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

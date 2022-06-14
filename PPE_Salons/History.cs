@@ -28,10 +28,10 @@ namespace PPE_Salons
             {
                 DateTime fin = DateTime.Now;
                 DBConnection dbCon = new DBConnection();
-                dbCon.Server = "127.0.0.1";
-                dbCon.DatabaseName = "ppe";
-                dbCon.UserName = "ClientLourd";
-                dbCon.Password = Crypto.Decrypt("eqmNIlqzbB/Tn8Ld1T1fkXofwKCMVzfz");//Pour éviter d'afficher le mot de passe en clair dans le code
+                dbCon.Server = "ppebelletablecerfal.chaisgxhr4z6.eu-west-3.rds.amazonaws.com";
+                dbCon.DatabaseName = "PPE_Willy";
+                dbCon.UserName = "admin";
+                dbCon.Password = Crypto.Decrypt("tr9y0URXywxHt1XgTEn4yg==");//Pour éviter d'afficher le mot de passe en clair dans le code
                 if (dbCon.IsConnect())
                 {
                     String sqlString = "UPDATE Historique SET fin = ?h_fin WHERE Id = ?h_id";
@@ -54,20 +54,18 @@ namespace PPE_Salons
             try
             {
                 DateTime debut = DateTime.Now;
-                DateTime fin = DateTime.Now;
 
-                id = AppelerProcedureStockee();
+                id = AppelerProcedureStockeeHistorique();
                 DBConnection dbCon = new DBConnection();
-                dbCon.Server = "127.0.0.1";
-                dbCon.DatabaseName = "ppe";
-                dbCon.UserName = "ClientLourd";
-                dbCon.Password = Crypto.Decrypt("eqmNIlqzbB/Tn8Ld1T1fkXofwKCMVzfz");//Pour éviter d'afficher le mot de passe en clair dans le code
+                dbCon.Server = "ppebelletablecerfal.chaisgxhr4z6.eu-west-3.rds.amazonaws.com";
+                dbCon.DatabaseName = "PPE_Willy";
+                dbCon.UserName = "admin";
+                dbCon.Password = Crypto.Decrypt("tr9y0URXywxHt1XgTEn4yg==");//Pour éviter d'afficher le mot de passe en clair dans le code
                 if (dbCon.IsConnect())
                 {
-                    String sqlString = "INSERT INTO Historique (id, debut, fin, id_user) VALUES(?h_id, ?h_debut, ?h_fin, ?user_id)";
+                    String sqlString = "INSERT INTO historique (id, debut, id_user) VALUES(?h_id, ?h_debut, ?user_id)";
                     sqlString = Tools.PrepareLigne(sqlString, "?h_id", Tools.PrepareChamp(id.ToString(), "Nombre"));
                     sqlString = Tools.PrepareLigne(sqlString, "?h_debut", Tools.PrepareChamp(debut.ToString("F"), "Chaine"));
-                    sqlString = Tools.PrepareLigne(sqlString, "?h_fin", Tools.PrepareChamp(fin.ToString("F"), "Chaine"));
                     sqlString = Tools.PrepareLigne(sqlString, "?user_id", Tools.PrepareChamp(IdUtilisateur.ToString(), "Chaine"));
                     var cmd = new MySqlCommand(sqlString, dbCon.Connection);
                     cmd.ExecuteNonQuery();
@@ -82,15 +80,15 @@ namespace PPE_Salons
 
         }
 
-        private int AppelerProcedureStockee()
+        private int AppelerProcedureStockeeHistorique()
         {
             try
             {
                 DBConnection dbCon = new DBConnection();
-                dbCon.Server = "127.0.0.1";
-                dbCon.DatabaseName = "ppe";
-                dbCon.UserName = "ClientLourd";
-                dbCon.Password = Crypto.Decrypt("eqmNIlqzbB/Tn8Ld1T1fkXofwKCMVzfz");//Pour éviter d'afficher le mot de passe en clair dans le code
+                dbCon.Server = "ppebelletablecerfal.chaisgxhr4z6.eu-west-3.rds.amazonaws.com";
+                dbCon.DatabaseName = "PPE_Willy";
+                dbCon.UserName = "admin";
+                dbCon.Password = Crypto.Decrypt("tr9y0URXywxHt1XgTEn4yg==");//Pour éviter d'afficher le mot de passe en clair dans le code
                 int Identifiant = -1;
                 if (dbCon.IsConnect())
                 {

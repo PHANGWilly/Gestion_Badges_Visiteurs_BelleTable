@@ -38,24 +38,26 @@
             this.Nom = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.btn__to_admin = new System.Windows.Forms.Button();
+            this.lbl__nb_conn = new System.Windows.Forms.Label();
+            this.lbl__last_conn = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MaGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // MaGrid
             // 
             this.MaGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MaGrid.Location = new System.Drawing.Point(34, 122);
+            this.MaGrid.Location = new System.Drawing.Point(34, 156);
             this.MaGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaGrid.MultiSelect = false;
             this.MaGrid.Name = "MaGrid";
             this.MaGrid.RowHeadersWidth = 62;
             this.MaGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.MaGrid.Size = new System.Drawing.Size(633, 573);
+            this.MaGrid.Size = new System.Drawing.Size(633, 507);
             this.MaGrid.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(483, 69);
+            this.button1.Location = new System.Drawing.Point(483, 103);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(184, 34);
@@ -66,7 +68,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(676, 122);
+            this.button2.Location = new System.Drawing.Point(676, 156);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 35);
@@ -77,7 +79,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(676, 192);
+            this.button3.Location = new System.Drawing.Point(676, 226);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(112, 35);
@@ -88,7 +90,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(676, 277);
+            this.button4.Location = new System.Drawing.Point(676, 300);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(112, 35);
@@ -99,7 +101,7 @@
             // 
             // tbNom
             // 
-            this.tbNom.Location = new System.Drawing.Point(82, 72);
+            this.tbNom.Location = new System.Drawing.Point(82, 106);
             this.tbNom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbNom.Name = "tbNom";
             this.tbNom.Size = new System.Drawing.Size(268, 26);
@@ -108,7 +110,7 @@
             // Nom
             // 
             this.Nom.AutoSize = true;
-            this.Nom.Location = new System.Drawing.Point(30, 77);
+            this.Nom.Location = new System.Drawing.Point(30, 111);
             this.Nom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Nom.Name = "Nom";
             this.Nom.Size = new System.Drawing.Size(42, 20);
@@ -117,7 +119,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(362, 69);
+            this.button5.Location = new System.Drawing.Point(362, 103);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(112, 35);
@@ -128,7 +130,7 @@
             // 
             // btn__to_admin
             // 
-            this.btn__to_admin.Location = new System.Drawing.Point(676, 578);
+            this.btn__to_admin.Location = new System.Drawing.Point(676, 622);
             this.btn__to_admin.Name = "btn__to_admin";
             this.btn__to_admin.Size = new System.Drawing.Size(112, 41);
             this.btn__to_admin.TabIndex = 8;
@@ -137,12 +139,32 @@
             this.btn__to_admin.Visible = false;
             this.btn__to_admin.Click += new System.EventHandler(this.click__btn__to_admin);
             // 
+            // lbl__nb_conn
+            // 
+            this.lbl__nb_conn.AutoSize = true;
+            this.lbl__nb_conn.Location = new System.Drawing.Point(30, 21);
+            this.lbl__nb_conn.Name = "lbl__nb_conn";
+            this.lbl__nb_conn.Size = new System.Drawing.Size(102, 20);
+            this.lbl__nb_conn.TabIndex = 9;
+            this.lbl__nb_conn.Text = "Connexion n°";
+            // 
+            // lbl__last_conn
+            // 
+            this.lbl__last_conn.AutoSize = true;
+            this.lbl__last_conn.Location = new System.Drawing.Point(30, 61);
+            this.lbl__last_conn.Name = "lbl__last_conn";
+            this.lbl__last_conn.Size = new System.Drawing.Size(166, 20);
+            this.lbl__last_conn.TabIndex = 10;
+            this.lbl__last_conn.Text = "Dernière connexion le ";
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(814, 727);
+            this.Controls.Add(this.lbl__last_conn);
+            this.Controls.Add(this.lbl__nb_conn);
             this.Controls.Add(this.btn__to_admin);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.Nom);
@@ -174,6 +196,8 @@
         private System.Windows.Forms.Label Nom;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btn__to_admin;
+        private System.Windows.Forms.Label lbl__nb_conn;
+        private System.Windows.Forms.Label lbl__last_conn;
     }
 }
 

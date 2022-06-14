@@ -37,6 +37,8 @@ namespace PPE_Salons
             this.btn__to_login = new System.Windows.Forms.Button();
             this.btn__to_cancel = new System.Windows.Forms.Button();
             this.lbl__error = new System.Windows.Forms.Label();
+            this.combo_box__bdd = new System.Windows.Forms.ComboBox();
+            this.lbl__bdd = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_box__identifiant
@@ -79,7 +81,7 @@ namespace PPE_Salons
             // btn__to_login
             // 
             this.btn__to_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn__to_login.Location = new System.Drawing.Point(453, 325);
+            this.btn__to_login.Location = new System.Drawing.Point(453, 339);
             this.btn__to_login.Name = "btn__to_login";
             this.btn__to_login.Size = new System.Drawing.Size(169, 47);
             this.btn__to_login.TabIndex = 5;
@@ -90,7 +92,7 @@ namespace PPE_Salons
             // btn__to_cancel
             // 
             this.btn__to_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn__to_cancel.Location = new System.Drawing.Point(169, 327);
+            this.btn__to_cancel.Location = new System.Drawing.Point(169, 341);
             this.btn__to_cancel.Name = "btn__to_cancel";
             this.btn__to_cancel.Size = new System.Drawing.Size(169, 45);
             this.btn__to_cancel.TabIndex = 6;
@@ -108,12 +110,34 @@ namespace PPE_Salons
             this.lbl__error.Size = new System.Drawing.Size(0, 29);
             this.lbl__error.TabIndex = 7;
             this.lbl__error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl__error.Visible = false;
+            // 
+            // combo_box__bdd
+            // 
+            this.combo_box__bdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.combo_box__bdd.FormattingEnabled = true;
+            this.combo_box__bdd.Location = new System.Drawing.Point(382, 246);
+            this.combo_box__bdd.Name = "combo_box__bdd";
+            this.combo_box__bdd.Size = new System.Drawing.Size(240, 37);
+            this.combo_box__bdd.TabIndex = 8;
+            // 
+            // lbl__bdd
+            // 
+            this.lbl__bdd.AutoSize = true;
+            this.lbl__bdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl__bdd.Location = new System.Drawing.Point(164, 249);
+            this.lbl__bdd.Name = "lbl__bdd";
+            this.lbl__bdd.Size = new System.Drawing.Size(128, 29);
+            this.lbl__bdd.TabIndex = 9;
+            this.lbl__bdd.Text = "Connexion";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl__bdd);
+            this.Controls.Add(this.combo_box__bdd);
             this.Controls.Add(this.lbl__error);
             this.Controls.Add(this.btn__to_cancel);
             this.Controls.Add(this.btn__to_login);
@@ -139,5 +163,7 @@ namespace PPE_Salons
         private System.Windows.Forms.Button btn__to_login;
         private System.Windows.Forms.Button btn__to_cancel;
         private System.Windows.Forms.Label lbl__error;
+        private System.Windows.Forms.ComboBox combo_box__bdd;
+        private System.Windows.Forms.Label lbl__bdd;
     }
 }
